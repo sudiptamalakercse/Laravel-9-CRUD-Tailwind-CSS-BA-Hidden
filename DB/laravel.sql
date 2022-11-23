@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2022 at 07:47 PM
+-- Generation Time: Nov 23, 2022 at 11:06 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -109,10 +109,14 @@ CREATE TABLE `tasks` (
 --
 
 INSERT INTO `tasks` (`id`, `task`, `created_at`, `updated_at`) VALUES
-(1, 'I will play football tomorrow.', '2022-11-15 11:36:43', '2022-11-15 11:36:43'),
-(2, 'I will meet today with my younger brother.', '2022-11-15 11:37:24', '2022-11-15 11:37:24'),
-(3, 'I will watch TV after some times.', '2022-11-15 11:39:12', '2022-11-15 11:39:12'),
-(4, 'I am going to celebrate the birthday of my younger brother at 12 A.M. today.', '2022-11-15 11:41:55', '2022-11-15 11:42:37');
+(1, 'I will meet with my brother tomorrow.', NULL, NULL),
+(2, 'I am going to start reading at 10 pm.', NULL, NULL),
+(3, 'I am going to celebrate my friend\'s birthday tomorrow.', NULL, NULL),
+(4, 'I am going to start reading at 10 pm.', NULL, NULL),
+(5, 'I will meet with my brother tomorrow.', NULL, NULL),
+(6, 'I will meet with my brother tomorrow.', NULL, NULL),
+(7, 'I am going to celebrate my friend\'s birthday tomorrow.', NULL, NULL),
+(8, 'I am going to celebrate my friend\'s birthday tomorrow.', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -130,13 +134,6 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Sudipta Malaker', 'malakersudipta@gmail.com', '2022-11-15 11:35:55', '$2y$10$WNcM0tEn/2LRM0lh7XSvbudKRBovnhn9/vTC8ZABrssKdMR8eZFwe', NULL, '2022-11-15 11:33:13', '2022-11-15 11:35:55');
 
 --
 -- Indexes for dumped tables
@@ -208,13 +205,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `tasks`
 --
 ALTER TABLE `tasks`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
